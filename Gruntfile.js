@@ -2,15 +2,15 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    // concat: {
-    //   options: {
-    //     separator: ';'
-    //   },
-    //   dist: {
-    //     src: ['public/client/*.js'],
-    //     dest: 'dist/built.js',
-    //   }
-    // },
+    concat: {
+      options: {
+        separator: ';'
+      },
+      dist: {
+        src: ['public/client/*.js'],
+        dest: 'dist/built.js',
+      }
+    },
     mochaTest: {
       test: {
         options: {
@@ -26,13 +26,13 @@ module.exports = function(grunt) {
       }
     },
 
-    // uglify: {
-    //   my_target: {
-    //     files: [{
-    //       'dist/output.min.js': ['dist/built.js']
-    //     }]
-    //   }
-    // },
+    uglify: {
+      my_target: {
+        files: [{
+          'dist/output.min.js': ['dist/built.js']
+        }]
+      }
+    },
 
     eslint: {
       target: [
